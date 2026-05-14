@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMDB Movie Search</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>OMDB Movie Search</h1>
+    <p class="subtitle">Search for a movie and see its details.</p>
+
+    <div class="search-box">
+      <input type="text" id="movieInput" placeholder="Enter movie name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <p id="message"></p>
+
+    <div id="movieResult" class="movie-card"></div>
+
+    <!-- Genres Section -->
+    <section>
+      <h2 class="section-title">Genres</h2>
+
+      <div class="genre-buttons">
+        <button onclick="showGenre('action')">Action</button>
+        <button onclick="showGenre('scifi')">Sci-Fi</button>
+        <button onclick="showGenre('fantasy')">Fantasy</button>
+        <button onclick="showGenre('animation')">Animation</button>
+      </div>
+
+      <div id="genreMovies" class="poster-grid"></div>
+    </section>
+
+    <!-- Popular Movies Section -->
+    <section>
+      <h2 class="section-title">Popular Movies</h2>
+      <div id="popularMovies" class="poster-grid"></div>
+    </section>
+
+    <!-- Search History Section -->
+    <section>
+      <h2 class="section-title">Search History</h2>
+
+      <div class="history-header">
+        <div id="searchHistory" class="history-list"></div>
+        <button id="clearHistoryBtn">Clear History</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

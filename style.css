@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1974&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.search-box button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #b20710;
+}
+
+#message {
+  color: #ff6b6b;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.movie-card {
+  display: none;
+  gap: 25px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 25px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.movie-card img {
+  width: 260px;
+  border-radius: 12px;
+}
+
+.movie-info h2 {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.movie-info p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.movie-card[style*="block"] {
+  display: flex !important;
+}
+
+.section-title {
+  font-size: 38px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.poster-card {
+  position: relative;
+  min-width: 160px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.poster-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.poster-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.poster-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.genre-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0 40px;
+  flex-wrap: wrap;
+}
+
+.genre-buttons button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #e50914, #b20710);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.genre-buttons button:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #ff1f1f, #c40000);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.history-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.history-list button,
+#clearHistoryBtn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #e50914;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.history-list button:hover,
+#clearHistoryBtn:hover {
+  background: #b20710;
+  transform: scale(1.05);
+}
+
+.rating-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: black;
+  color: #ffd700;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .movie-card[style*="block"] {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
